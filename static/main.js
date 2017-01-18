@@ -49,7 +49,7 @@ $("document").ready(function($){
                             // the user is logged in to Facebook, 
                             // but has not authenticated your app
                     } 
-                    else if(uid != -1 and accessToken != -1){
+                    else if(uid != -1 && accessToken != -1){
                             // the user isn't logged in to Facebook.
                             FB.login(function(response){
                           
