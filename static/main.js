@@ -60,7 +60,7 @@ $("document").ready(function($){
                 // var uid = response.authResponse.userID;
                 // var accessToken = response.authResponse.accessToken;
                 },true);
-                if(uid != -1 and accessToken != -1)
+                if(uid != -1 && accessToken != -1)
                 {
                     break;
                 }
