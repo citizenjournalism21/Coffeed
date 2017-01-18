@@ -45,10 +45,11 @@ $("document").ready(function($){
             } else {
             // the user isn't logged in to Facebook.
                FB.login(function(response){
-                  var uid = response.authResponse.userID;
-                  var accessToken = response.authResponse.accessToken;
+                  
             });
             }
+            var uid = response.authResponse.userID;
+            var accessToken = response.authResponse.accessToken;
         },true);
 
           // alert('here it is');
