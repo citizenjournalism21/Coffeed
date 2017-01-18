@@ -60,12 +60,22 @@ $("document").ready(function($){
                     version: 'v2.7'
                 });
            getStatus();
-           if(FB.getAuthResponse() != null) 
+           while(true)
            {
-               FB.api('/me', function(response) 
-               {
-                  alert ("Welcome " + response.name + ": Your UID is " + response.id); 
-               });
+                FB.getLoginStatus(function(response) 
+                {
+                        if (response.status === 'connected') 
+                        {
+                            uid = response.authResponse.userID;
+                            accessToken = response.authResponse.accessToken;
+                            break;
+                        } 
+                        else if (response.status === 'not_authorized') 
+                        {
+                                // the user is logged in to Facebook, 
+                                // but has not authenticated your app
+                        }
+                },true);
            }
          });
     }
