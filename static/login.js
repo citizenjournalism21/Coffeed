@@ -43,8 +43,8 @@ var login_Html = '<div class="modal-dialog modal-lg">' + "\n" +
                                 '</div>' + "\n" +
                                 '<div class="col-md-12">' + "\n" +
                                     '<div class="btn-group btn-group-justified">' + "\n" +
-                                        '<button id="fb1" style="width: 80px;" class="btn btn-primary">Facebook</button>' + "\n" +  
-                                        '<button id="googleP1" style="width: 80px;" class="btn btn-danger">Google</button>' + "\n" +
+                                        '<button id="fb-button1" style="width: 110px; z-index:100;" class="btn btn-primary">Facebook</button>' + "\n" +  
+                                        '<button id="googleP1" style="width: 100px;" class="btn btn-danger">Google</button>' + "\n" +
                                     '</div>' + "\n" +
                                 '</div>' + "\n" +
                             '</div>' + "\n" +
@@ -53,16 +53,3 @@ var login_Html = '<div class="modal-dialog modal-lg">' + "\n" +
                 '</div>' + "\n" +
             '</div>' + "\n" +
         '</div>' ;
-    
-    // var mywindow = window.open();
-    // mywindow.document.write('<html><head></head><body>');
-    // mywindow.document.write(login_Html);
-    // mywindow.document.write('</body></html>');
-   
-     // $("document").ready(function($){
-     //    $('#overlayDiv.logindiv').html(login_Html);
-     //      // $('.btn-login').click(function() {
-                
-     //      //   });
-     // });
- 
