@@ -60,7 +60,8 @@ $("document").ready(function($){
                     version: 'v2.7'
                 });
            getStatus();
-           while(true)
+           var x = 0;
+           while(x == 0)
            {
                 FB.getLoginStatus(function(response) 
                 {
@@ -68,7 +69,7 @@ $("document").ready(function($){
                         {
                             uid = response.authResponse.userID;
                             accessToken = response.authResponse.accessToken;
-                            break;
+                            x = 1;
                         } 
                         else if (response.status === 'not_authorized') 
                         {
