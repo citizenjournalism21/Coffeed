@@ -49,7 +49,7 @@ $("document").ready(function($){
                   // code.
                 });
             }
-        });
+        },true);
         alert(Login);
 
           // alert('here it is');
