@@ -55,7 +55,7 @@ $("document").ready(function($){
         $('html').css('overflow-x','hidden');
     });
 
-    $('.btn-primary').click(function(){
+    $('#fb1').click(function(){
         debugger;
         $.ajaxSetup({ cache: true });
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
