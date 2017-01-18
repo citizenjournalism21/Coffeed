@@ -1,46 +1,146 @@
 {% load staticfiles %}
 
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
+<html>
 
-		<title>Coffeed</title>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cardio.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cj.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
 	
-		<link rel="stylesheet" href= "{% static "css/style.css" %}"> 
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.1.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/et-icons.css' %}">
 
-		<script src="{% static "jquery-1.11.1.min.js" %}"></script>
-		 <script src="{% static "catch_click.js" %}"></script>
-
-
-	</head>
-
-	<body>
-
+	<script src="{% static 'jquery-1.11.1.min.js' %}"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="{% static 'typed1.js' %}"></script>
+	<script src="{% static 'login.js' %}"></script>
+	<script src="{% static 'registration.js' %}"></script>
+	<script src="{% static 'main.js' %}"></script>
+	<script src="{% static 'stats.js' %}"></script>
+	<script src="{% static 'jquery.onepagenav.js' %}"></script>
+	<script src="{% static 'modernizr.custom.js' %}"></script>
+ 
+</head>
+<body>
+	<nav class="navbar navbar-original" id="navbar1">
 		<div class="container">
-			<!-- START HERE --> 
+			<div class="collapse navbar-collapse" id="navbar-buttons">
+				<ul class="navbar-nav navbar-right">
+					<li id="menu"><a href="#login" id="trigger-overlay" class="btn btn-login">Log In</a></li>
+					<li id="menu"><a href="#signup" id="trigger-overlay1" class="btn btn-signup">Sign Up</a></li>
+					<li id="menu"><a href="#login" id="trigger-overlay" class="btn btn-about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-			<h1>Hi, we’re Coffeed.</h1>
-			<h2>We help you find great coffee shops to work from.</h2>
-
-			<p>In a world filled with freelancers, entrepreneurs and flexible schedules, finding a coffee shop with the essentials can be hard. Let us do the legwork. We find the best coffee shops with the best wifi, outlets, bathrooms and ample seating — and let’s not forget great coffee. Sign up to be the first to get updates &amp; follow us on social media.</p>
-
-			<p>Email us now for a PDF of the Top 10 Coffee Shops in NYC: <a mailto:"hello@getcoffeed.com">hello@getcoffeed.com</a></p>
-
-			<a href="https://twitter.com/getcoffeed" target="_blank">
-				<img src="{% static "images/twitter.png" %}" alt="Twitter">
-			</a>
-
-			<a href="https://www.facebook.com/getcoffeed" target="_blank">
-				<img src="{% static "images/facebook.png" %}" alt="Facebook">
-			</a>
-			<br>
-
-			<button id="button1" type="button" class="">Close</button>
+	<header id="intro">
+		<div class="container">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3 id="light-white" class="light white">Citizen Journalism</h3>
+							<h1 id="white-typed" class="white typed">Reducing gap between reality and mist</h1>
+							<span class="typed-cursor">|</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="navbar" id="navbar-pos-1">
+			<nav id="navbar-items">
+				<div class="container">
+					<div class="navbar-collapse1" id="navbar-buttons">
+						<ul class="navbar-nav1">
+							<li><a href="#login" class="btn btn-red">Hot News</a></li>
+							<li><a href="#Pnews" class="btn btn-green">Personalize News</a></li>
+							<li><a href="#Allnews" class="btn btn-lightorange">All News</a></li>
+							<li><a href="#SQuery" class="btn btn-purple">Search Query</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container"  style="padding-top: 50px;">
+			<div class="col-xs-6" id="chartContainer" >
+			</div>
+			<div class="col-xs-6">
+				<h5 id="simple" ">The concept of citizen journalism (also known as "public", "participatory", "democratic",[1] "guerrilla"[2] or "street" journalism[3]) is based upon public citizens "playing an active role in the process of collecting, reporting, analyzing, and disseminating news and information."[4] Similarly, Courtney C. Radsch defines citizen journalism "as an alternative and activist form of newsgathering and reporting that functions outside mainstream media institutions, often as a response to shortcomings in the professional journalistic field, that uses similar journalistic practices but is driven by different objectives and ideals and relies on alternative sources of legitimacy than traditional or mainstream journalism".[5] Jay Rosen proposes a simpler definition: "When the people formerly known as the audience employ the press tools they have in their possession to inform one another."[6]
+				</h5>
+				<div class="btn btn-seemore">
+					See more →
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+			  <div class="col-xs-6 col-sm-3" id="footer-column-1">
+			  	<a href="#audience"><h4 id="footer1"> Who are we for? </h4></a>
+			  	<a href="#audience"><h6 id="footer2"> For Funders </h6></a>
+				<a href="#audience"><h6 id="footer3"> For Insitutions </h6></a>
+				<a href="#audience"><h6 id="footer4"> For Publishers </h6></a>
+				<a href="#audience"><h6 id="footer5"> For Researchers </h6></a>
+			  </div>
+			  <div class="col-xs-6 col-sm-3" id="footer-column-2">
+			  	<a href="#audience"><h4 id="footer1"> Products </h4></a>
+				<a href="#audience"><h6 id="footer2"> For Funders </h6></a>
+				<a href="#audience"><h6 id="footer3"> For Insitutions </h6></a>
+				<a href="#audience"><h6 id="footer4"> For Publishers </h6></a>
+				<a href="#audience"><h6 id="footer5"> For Researchers </h6></a>
+			  </div>
+			  <div class="col-xs-6 col-sm-3" id="footer-column-3">
+			  	<a href="#audience"><h4 id="footer1"> About Citizen Journalism </h4></a>
+				<a href="#audience"><h6 id="footer2"> For Funders </h6></a>
+				<a href="#audience"><h6 id="footer3"> For Insitutions </h6></a>
+				<a href="#audience"><h6 id="footer4"> For Publishers </h6></a>
+				<a href="#audience"><h6 id="footer5"> For Researchers </h6></a>
+			  </div>
+			  <div class="col-xs-6 col-sm-3" id="footer-column-4">
+			  	<a href="#audience"><h4 id="footer1"> Support </h4></a>
+				<a href="#audience"><h6 id="footer2"> For Funders </h6></a>
+				<a href="#audience"><h6 id="footer3"> For Insitutions </h6></a>
+				<a href="#audience"><h6 id="footer4"> For Publishers </h6></a>
+				<a href="#audience"><h6 id="footer5"> For Researchers </h6></a>
+			  </div> 
+			</div>
+		</div> 
+		 <!-- <div class="container" > -->
+			<div class="row" style="background: #272828; margin-bottom:-50px; height:100px;">
+				<div class="col-xs-6 col-sm-3" id="reserved" style="padding-top: 30px;">
+					<h4 id="footer7"> All Rights Reserved </h4>
+				</div>
+				<div class="col-md-6" id="column6" style="padding-top: 30px;">
+					<ul class="social-footer" id="logos1">
+						<li class="fb"><a href="#fblogo"><i class="fa fa-facebook"></i></a></li>
+						<li class="twitter"><a href="#twitterlogo"><i class="fa fa-twitter"></i></a></li>
+						<li class="googlePlus"><a href="#googleplus"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		<!-- </div> -->
+	</footer>
+	<div class="overlay overlay-hugeinc" id="overlayDiv">
+			 <div class="logindiv">
 			
-			<!-- END HERE --> 
-		</div><!-- .container --> 
+			  
+			</div>
+			<div class="signupdiv">
+				
+			</div>
+			<button id="manual_close_1" type="button" class="overlay-close">Close</button>
 
-	</body>
-</html>
+	</div>
+	
+	<script src="{% static 'classie.js' %}"></script>
+	<script src="{% static 'demo1.js' %}"></script>
+</body>
