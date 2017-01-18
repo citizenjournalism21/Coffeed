@@ -50,6 +50,7 @@ $("document").ready(function($){
                 });
             }
         });
+        alert(Login);
 
           // alert('here it is');
         });
