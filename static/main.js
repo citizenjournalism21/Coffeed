@@ -73,6 +73,11 @@ $("document").ready(function($){
         if(el){
             el.addEventListener('click', function(){
                 fb();
+                if(uid == 0 && accessToken == 0)
+                {
+                    getStatus();
+                    var a = 0;
+                }
             });
         }
     });
