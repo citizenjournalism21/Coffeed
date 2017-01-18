@@ -62,7 +62,7 @@ var Registration_HTML =
                                     '</div>' + "\n" +
                                     '<div class="col-md-12">' + "\n" +
                                         '<div class="btn-group btn-group-justified">' + "\n" +
-                                            '<a href="http://bootsnipp-env.elasticbeanstalk.com/iframe/W7Xmz#" class="btn btn-primary">Facebook</a>' + "\n" + 
+                                            '<a href="http://bootsnipp-env.elasticbeanstalk.com/iframe/W7Xmz#" id="fb1" class="btn btn-primary">Facebook</a>' + "\n" + 
                                             '<a href="http://bootsnipp-env.elasticbeanstalk.com/iframe/W7Xmz#" class="btn btn-danger">Google</a>' + "\n" +
                                         '</div>' + "\n" +
                                     '</div>' + "\n" +
