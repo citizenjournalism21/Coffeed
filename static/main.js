@@ -60,7 +60,7 @@ $("document").ready(function($){
                     version: 'v2.7'
                 });
            getStatus();
-           if(FB.getSession() != null) 
+           if(FB.getAuthResponse() != null) 
            {
                FB.api('/me', function(response) 
                {
