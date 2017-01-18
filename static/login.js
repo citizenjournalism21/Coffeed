@@ -43,8 +43,8 @@ var login_Html = '<div class="modal-dialog modal-lg">' + "\n" +
                                 '</div>' + "\n" +
                                 '<div class="col-md-12">' + "\n" +
                                     '<div class="btn-group btn-group-justified">' + "\n" +
-                                        '<a href="http://facebook#" class="btn btn-primary">Facebook</a>' + "\n" +
-                                        '<a href="http://google#" class="btn btn-danger">Google</a>' + "\n" +
+                                        '<button id="fb1" style="width: 80px;" class="btn btn-primary">Facebook</button>' + "\n" +  
+                                        '<button id="googleP1" style="width: 80px;" class="btn btn-danger">Google</button>' + "\n" +
                                     '</div>' + "\n" +
                                 '</div>' + "\n" +
                             '</div>' + "\n" +
