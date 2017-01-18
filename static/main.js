@@ -45,12 +45,11 @@ $("document").ready(function($){
             } else {
             // the user isn't logged in to Facebook.
                FB.login(function(response){
-                  // Handle the response object, like in statusChangeCallback() in our demo
-                  // code.
-                });
+                  var uid = response.authResponse.userID;
+                  var accessToken = response.authResponse.accessToken;
+            });
             }
         },true);
-        alert(Login);
 
           // alert('here it is');
         });
