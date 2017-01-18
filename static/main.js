@@ -51,15 +51,22 @@ $("document").ready(function($){
                 }
         },true);
     }
-    function fb(){
+    function fb()
+    {
         $.ajaxSetup({ cache: true });
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
            FB.init({
                     appId: '1810040475914387',
                     version: 'v2.7'
                 });
-                getStatus();
-        // }
+           getStatus();
+           if(FB.getSession() != null) 
+           {
+               FB.api('/me', function(response) 
+               {
+                  alert ("Welcome " + response.name + ": Your UID is " + response.id); 
+               });
+           }
          });
     }
 
@@ -73,11 +80,6 @@ $("document").ready(function($){
         if(el){
             el.addEventListener('click', function(){
                 fb();
-                if(uid == 0 && accessToken == 0)
-                {
-                    getStatus();
-                    var a = 0;
-                }
             });
         }
     });
