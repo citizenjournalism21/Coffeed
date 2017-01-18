@@ -30,14 +30,27 @@ $("document").ready(function($){
     function fb(){
         $.ajaxSetup({ cache: true });
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-          FB.init({
-            appId: '1810040475914387',
-            version: 'v2.7'
-          });
-          FB.login(function(response){
-          // Handle the response object, like in statusChangeCallback() in our demo
-          // code.
+          
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+            } else if (response.status === 'not_authorized') {
+             // the user is logged in to Facebook, 
+             // but has not authenticated your app
+            } else {
+            // the user isn't logged in to Facebook.
+                FB.init({
+                    appId: '1810040475914387',
+                    version: 'v2.7'
+                });
+                FB.login(function(response){
+                  // Handle the response object, like in statusChangeCallback() in our demo
+                  // code.
+                });
+            }
         });
+
           // alert('here it is');
         });
     }
