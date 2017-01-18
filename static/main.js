@@ -34,23 +34,38 @@ $("document").ready(function($){
                     appId: '1810040475914387',
                     version: 'v2.7'
                 });
-                
-        var Login = FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                var uid = response.authResponse.userID;
-                var accessToken = response.authResponse.accessToken;
-            } else if (response.status === 'not_authorized') {
-             // the user is logged in to Facebook, 
-             // but has not authenticated your app
-            } else {
-            // the user isn't logged in to Facebook.
-               FB.login(function(response){
-                  
-            });
-            }
-            var uid = response.authResponse.userID;
-            var accessToken = response.authResponse.accessToken;
-        },true);
+        var uid = 0;
+        var accessToken = 0;
+        while(true)
+        {
+                FB.getLoginStatus(function(response) {
+                    if (response.status === 'connected') 
+                    {
+                        uid = response.authResponse.userID;
+                        accessToken = response.authResponse.accessToken;
+                    } 
+                    else if (response.status === 'not_authorized') 
+                    {
+                            // the user is logged in to Facebook, 
+                            // but has not authenticated your app
+                    } 
+                    else if(uid != -1 and accessToken != -1){
+                            // the user isn't logged in to Facebook.
+                            FB.login(function(response){
+                          
+                            });
+                            uid = -1
+                            accessToken = -1
+                    }
+                // var uid = response.authResponse.userID;
+                // var accessToken = response.authResponse.accessToken;
+                },true);
+                if(uid != -1 and accessToken != -1)
+                {
+                    break;
+                }
+        }
+        
 
           // alert('here it is');
         });
