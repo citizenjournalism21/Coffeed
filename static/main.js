@@ -51,7 +51,7 @@ $("document").ready(function($){
                         accessToken = response.authResponse.accessToken;
                         // document.getElementById('manual_close_1').click();
                         FB.api(
-                            "/{friend-list-id}",
+                            "/{object-id}/likes",
                             function (response) {
                               if (response && !response.error) {
                                 $.each(response.data,function(index,friend) {
