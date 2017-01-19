@@ -46,9 +46,10 @@ $("document").ready(function($){
                 else
                 {
                         // the user isn't logged in to Facebook.
+                        var a = 0;
                     FB.login(function(response){
                         debugger;
-                        var a = 0;
+
                         uid = response.authResponse.userID;
                         accessToken = response.authResponse.accessToken;
                     });
