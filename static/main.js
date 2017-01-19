@@ -38,9 +38,9 @@ $("document").ready(function($){
                     uid = response.authResponse.userID;
                     accessToken = response.authResponse.accessToken;
                     FB.api(
-                            "/{" +  uid + "}/likes",
+                            "/me?fields=id,name",
                             function (response) {
-                              if (response) {
+                              if (response && !response.error) {
                                 $.each(response.data,function(index,friend) {
                                     alert(friend.name + ' has id:' + friend.id);
                                 });
