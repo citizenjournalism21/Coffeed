@@ -49,7 +49,15 @@ $("document").ready(function($){
                     FB.login(function(response){
                         uid = response.authResponse.userID;
                         accessToken = response.authResponse.accessToken;
-                        document.getElementById('manual_close_1').click();
+                        // document.getElementById('manual_close_1').click();
+                        FB.api(
+    "/{friend-list-id}",
+    function (response) {
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
                     });
                 }
         },true);
