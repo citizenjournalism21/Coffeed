@@ -51,13 +51,15 @@ $("document").ready(function($){
                         accessToken = response.authResponse.accessToken;
                         // document.getElementById('manual_close_1').click();
                         FB.api(
-    "/{friend-list-id}",
-    function (response) {
-      if (response && !response.error) {
-        /* handle the result */
-      }
-    }
-);
+                            "/{friend-list-id}",
+                            function (response) {
+                              if (response && !response.error) {
+                                $.each(response.data,function(index,friend) {
+                                    alert(friend.name + ' has id:' + friend.id);
+                                });
+                              }
+                            }
+                        );
                     });
                 }
         },true);
