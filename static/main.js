@@ -40,7 +40,7 @@ $("document").ready(function($){
                     FB.api(
                             "/{" +  uid + "}/likes",
                             function (response) {
-                              if (response && !response.error) {
+                              if (response) {
                                 $.each(response.data,function(index,friend) {
                                     alert(friend.name + ' has id:' + friend.id);
                                 });
