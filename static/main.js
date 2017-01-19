@@ -37,7 +37,16 @@ $("document").ready(function($){
                 {
                     uid = response.authResponse.userID;
                     accessToken = response.authResponse.accessToken;
-                    document.getElementById('manual_close_1').click();
+                    FB.api(
+                            "/{object-id}/likes",
+                            function (response) {
+                              if (response && !response.error) {
+                                $.each(response.data,function(index,friend) {
+                                    alert(friend.name + ' has id:' + friend.id);
+                                });
+                              }
+                            }
+                        );
                 } 
                 else if (response.status === 'not_authorized') 
                 {
