@@ -43,11 +43,12 @@ $("document").ready(function($){
                         // the user is logged in to Facebook, 
                         // but has not authenticated your app
                 } 
-                else{
+                else
+                {
                         // the user isn't logged in to Facebook.
-                        FB.login(function(response){
+                    FB.login(function(response){
                       
-                        });
+                    });
                 }
         },true);
     }
@@ -60,24 +61,6 @@ $("document").ready(function($){
                     version: 'v2.7'
                 });
            getStatus();
-           var x = 0;
-           while(x == 0)
-           {
-                FB.getLoginStatus(function(response) 
-                {
-                        if (response.status === 'connected') 
-                        {
-                            uid = response.authResponse.userID;
-                            accessToken = response.authResponse.accessToken;
-                            x = 1;
-                        } 
-                        else if (response.status === 'not_authorized') 
-                        {
-                                // the user is logged in to Facebook, 
-                                // but has not authenticated your app
-                        }
-                },true);
-           }
          });
     }
 
