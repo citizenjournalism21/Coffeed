@@ -61,7 +61,7 @@ $("document").ready(function($){
         $.ajaxSetup({ cache: true });
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
            FB.init({
-                    appId: '1709059262719261',
+                    appId: '1810040475914387',
                     xfbml      : true,
                     version: 'v2.7'
                 });
