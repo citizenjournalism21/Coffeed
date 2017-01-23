@@ -31,17 +31,7 @@ $("document").ready(function($){
     var accessToken = 0;
     function getStatus()
     {
-        
-    }
-    function fb()
-    {
-        $.ajaxSetup({ cache: true });
-        $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-           FB.init({
-                    appId: '1810040475914387',
-                    version: 'v2.7'
-                });
-           FB.getLoginStatus(function(response) 
+        FB.getLoginStatus(function(response) 
            {
                     if (response.status === 'connected') 
                     {
@@ -64,7 +54,17 @@ $("document").ready(function($){
                             // document.getElementById('manual_close_1').click();
                         });
                     }
-            });
+            }, true);
+    }
+    function fb()
+    {
+        $.ajaxSetup({ cache: true });
+        $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+           FB.init({
+                    appId: '1810040475914387',
+                    version: 'v2.7'
+                });
+           getStatus();
             if(uid !=0)
             {
                 $('.logindiv').addClass('hidden');
