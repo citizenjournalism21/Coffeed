@@ -14,6 +14,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.1.0/css/font-awesome.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/et-icons.css' %}">
+	<link href="{% static 'css/interest.css' %}" rel="stylesheet">
 
 	<script src="{% static 'jquery-1.11.1.min.js' %}"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -21,6 +22,8 @@
 	<script src="{% static 'login.js' %}"></script>
 	<script src="{% static 'registration.js' %}"></script>
 	<script src="{% static 'main.js' %}"></script>
+	<script src="{% static 'interest.js' %}"></script>
+	<script src="{% static 'interestFunctions.js' %}"</script>
 	<script src="{% static 'stats.js' %}"></script>
 	<script src="{% static 'jquery.onepagenav.js' %}"></script>
 	<script src="{% static 'modernizr.custom.js' %}"></script>
@@ -131,15 +134,324 @@
 		<!-- </div> -->
 	</footer>
 	<div class="overlay overlay-hugeinc" id="overlayDiv">
-			 <div class="logindiv">
-			
-			  
-			</div>
-			<div class="signupdiv">
-				
-			</div>
-			<button id="manual_close_1" type="button" class="overlay-close">Close</button>
+			<div class="interestdiv hidden" style="z-index: 200;">
+				<div class="modal-dialog modal-lg" id="mainDiv" style="top: 0px;"> 
+		            <div class="modal-content"  style="width: 880px; height: 500px; top: 10px !important;"> 
+		                <div class="modal-header"> 
+		                    <h4 class="modal-title" id="myModalLabel">What are your interests ?</h4> 
+		                </div> 
+		                <div class="row" id="mainDivModalInterest" style="max-height: 350px; width: 893px;"> 
+		                    <div class="modal-body"> 
+		                        <div class="row"> 
+		                            <div class="col-md-8" id="sports-div1"  style="width: auto; height: 125px; left : 50px; top: 5px;"> 
+		                                     <div id="sports-image1" class="col-md-8 interest hover08"> 
+		                                         <div id="label1"> 
+		                                            <h6>Cricket </h6> 
+		                                        </div> 
+		                                        <img id="image1-circle1" src="img/circle.png" > 
+		                                        <img id="image1-circle2" src="img/circle2.png" > 
+		                                         <figure> 
+		                                            <img id="image1" src="img/cricket.jpg" > 
+		                                        </figure>     
+		                                     </div> 
+		                                     <div id="sports-image2" class="col-md-8 interest hover08"> 
+		                                        <div id="label2" > 
+		                                            <h6>Badminton </h6> 
+		                                        </div> 
+		                                        <img id="image2-circle1" src="img/circle.png" > 
+		                                        <img id="image2-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image2" src="img/badminton.jpg"> 
+		                                        </figure> 
+		                                     </div> 
+		                                     <div id="sports-image3" class="col-md-8 interest hover08"> 
+		                                        <div id="label3" > 
+		                                            <h6>Football </h6> 
+		                                        </div> 
+		                                        <img id="image3-circle1" src="img/circle.png" > 
+		                                        <img id="image3-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image3" src="img/football.jpg"> 
+		                                        </figure> 
+		                                     </div> 
 
+		                                     <div id="sports-image4" class="col-md-8 interest hover08"> 
+		                                         <div id="label4" > 
+		                                            <h6>Tennis </h6> 
+		                                        </div> 
+		                                        <img id="image4-circle1" src="img/circle.png" > 
+		                                        <img id="image4-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image4" src="img/tennis.jpg"> 
+		                                        </figure> 
+		                                     </div> 
+
+		                                     <div id="sports-image5" class="col-md-8 interest hover08"> 
+		                                         <div id="label5" > 
+		                                            <h6>Weather </h6> 
+		                                        </div> 
+		                                        <img id="image5-circle1" src="img/circle.png" > 
+		                                        <img id="image5-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image5" src="img/weather.jpg"> 
+		                                        </figure> 
+		                                     </div> 
+		                                 </div> 
+		                            </div> 
+		                            <div class="row" style="padding-top: 4%;"> 
+		                                <div class="col-md-8" id="sports-div2"  style="width: auto; height: 125px; left : 50px; top: 5px;"> 
+		                                    <div id="sports-image6" class="col-md-8 interest hover08"> 
+		                                             <div id="label6" > 
+		                                                <h6>Buisness </h6> 
+		                                            </div> 
+		                                            <img id="image6-circle1" src="img/circle.png" > 
+		                                            <img id="image6-circle2" src="img/circle2.png" > 
+		                                            <figure> 
+		                                                <img id="image6" src="img/business.jpg"> 
+		                                            </figure> 
+		                                    </div> 
+
+		                                    <div id="sports-image7" class="col-md-8 interest hover08"> 
+		                                         <div id="label7" > 
+		                                            <h6>Electronics </h6> 
+		                                        </div> 
+		                                        <img id="image7-circle1" src="img/circle.png" > 
+		                                        <img id="image7-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image7" src="img/electronics.jpg" > 
+		                                        </figure> 
+		                                     </div> 
+
+		                                     <div id="sports-image8" class="col-md-8 interest hover08"> 
+		                                         <div id="label8" > 
+		                                            <h6>History </h6> 
+		                                        </div> 
+		                                        <img id="image8-circle1" src="img/circle.png" > 
+		                                        <img id="image8-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image8" src="img/history.jpg" > 
+		                                        </figure> 
+		                                     </div> 
+
+		                                     <div id="sports-image9" class="col-md-8 interest hover08"> 
+		                                         <div id="label9" > 
+		                                            <h6>Fashion </h6> 
+		                                        </div> 
+		                                        <img id="image9-circle1" src="img/circle.png" > 
+		                                        <img id="image9-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image9" src="img/fashion.jpg" > 
+		                                        </figure> 
+		                                     </div> 
+
+		                                     <div id="sports-image10" class="col-md-8 interest hover08"> 
+		                                         <div id="label7" > 
+		                                            <h6>Finance </h6> 
+		                                        </div> 
+		                                        <img id="image10-circle1" src="img/circle.png" > 
+		                                        <img id="image10-circle2" src="img/circle2.png" > 
+		                                        <figure> 
+		                                            <img id="image10" src="img/finance.jpg" > 
+		                                        </figure> 
+		                                     </div> 
+		                                </div> 
+		                            </div> 
+		                            <div class="row"  style="padding-top: 4%;"> 
+		                                <div class="col-md-8" id="sports-div1"  style="width: auto; height: 125px; left : 50px; top: 5px;"> 
+		                                    <div id="sports-image11" class="col-md-8 interest hover08"> 
+		                                         <div id="label11" > 
+		                                            <h6>Daramas </h6> 
+		                                        </div> 
+		                                        <img id="image11-circle1" src="img/circle.png"> 
+		                                        <img id="image11-circle2" src="img/circle2.png"> 
+		                                        <figure> 
+		                                            <img id="image11" src="img/daramas.jpg"> 
+		                                        </figure> 
+		                                    </div> 
+		                                    <div id="sports-image12" class="col-md-8 interest hover08"> 
+		                                         <div id="label12" > 
+		                                            <h6>Politics </h6> 
+		                                        </div> 
+		                                        <img id="image12-circle1" src="img/circle.png"> 
+		                                        <img id="image12-circle2" src="img/circle2.png"> 
+		                                        <figure> 
+		                                            <img id="image12" src="img/politics.jpg"> 
+		                                        </figure> 
+		                                    </div> 
+		                                    <div id="sports-image13" class="col-md-8 interest hover08"> 
+		                                         <div id="label13" > 
+		                                            <h6>Education </h6> 
+		                                        </div> 
+		                                        <img id="image13-circle1" src="img/circle.png"> 
+		                                        <img id="image13-circle2" src="img/circle2.png"> 
+		                                        <figure> 
+		                                            <img id="image13" src="img/education.jpg"> 
+		                                        </figure> 
+		                                    </div> 
+		                                    <div id="sports-image14" class="col-md-8 interest hover08"> 
+		                                         <div id="label14" > 
+		                                            <h6>Health </h6> 
+		                                        </div> 
+		                                        <img id="image14-circle1" src="img/circle.png"> 
+		                                        <img id="image14-circle2" src="img/circle2.png"> 
+		                                        <figure> 
+		                                            <img id="image14" src="img/health.jpg"> 
+		                                        </figure> 
+		                                    </div> 
+		                                    <div id="sports-image15" class="col-md-8 interest hover08"> 
+		                                         <div id="label15" > 
+		                                            <h6>Movies </h6> 
+		                                        </div> 
+		                                        <img id="image15-circle1" src="img/circle.png"> 
+		                                        <img id="image15-circle2" src="img/circle2.png"> 
+		                                        <figure> 
+		                                            <img id="image15" src="img/movies.jpg"> 
+		                                        </figure> 
+		                                    </div> 
+		                                </div> 
+		                            </div> 
+		                    </div> 
+		                </div> 
+		                <div class="modal-footer" style="border-top: 0px solid !important; "> 
+		                    <button class="btn btn-primary" id="continueButton" style=" margin-right: 1%;">Continue</button> 
+		                </div> 
+		            </div> 
+		         </div>
+			</div>
+			<div class="logindiv hidden">
+				<div class="modal-dialog modal-lg" id="mainLoginDiv"> 
+		            <div class="modal-content"> 
+		                <div class="modal-header"> 
+		                    <h4 class="modal-title" id="myModalLabel">Log In</h4> 
+		                </div> 
+		                <div class="modal-body"> 
+		                    <div class="row"> 
+		                        <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;"> 
+		            
+		                            <!-- Tab panes --> 
+		                            <div class="tab-content"> 
+		                                <div class="tab-pane active" id="Login"> 
+		                                    <form role="form" class="form-horizontal"> 
+		                                    <div class="form-group"> 
+		                                        <label for="email" class="col-sm-2 control-label">UserName</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <input type="email" class="form-control" id="email1" placeholder="UserName"> 
+		                                        </div> 
+		                                    </div> 
+		                                    <div class="form-group"> 
+		                                        <label for="exampleInputPassword1" class="col-sm-2 control-label">Password</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+		                                        </div> 
+		                                    </div> 
+		                                    <div class="row"> 
+		                                        <div class="col-sm-2"> 
+		                                        </div> 
+		                                        <div class="col-sm-10"> 
+		                                            <button type="submit" id="submitButton" class="btn btn-primary btn-sm">Submit</button> 
+		                                            <a href="javascript:;">Forgot your password?</a> 
+		                                        </div> 
+		                                    </div> 
+		                                    </form> 
+		                                </div> 
+		                            </div> 
+		                            <div id="OR" class="hidden-xs">OR</div> 
+		                        </div> 
+		                        <div class="col-md-4"> 
+		                            <div class="row text-center sign-with"> 
+		                                <div class="col-md-12"> 
+		                                    <h3>Sign in with</h3> 
+		                                </div> 
+		                                <div class="col-md-12"> 
+		                                    <div class="btn-group btn-group-justified"> 
+		                                        <a href="http://facebook#" class="btn btn-primary">Facebook</a> 
+		                                        <a href="http://google#" class="btn btn-danger">Google</a> 
+		                                    </div> 
+		                                </div> 
+		                            </div> 
+		                        </div> 
+		                    </div> 
+		                </div> 
+		            </div> 
+		        </div>
+			</div>
+			<div class="signupdiv hidden">
+				<div class="modal-dialog modal-lg"> 
+		                <div class="modal-content"> 
+		                    <div class="modal-header"> 
+		                        <h4 class="modal-title" id="myModalLabel">Registration</h4> 
+		                    </div> 
+		                    <div class="modal-body"> 
+		                        <div class="row"> 
+		                            <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;"> 
+		                                <div class="tab-pane" id="Registration"> 
+		                                    <form role="form" class="form-horizontal"> 
+		                                    <div class="form-group"> 
+		                                        <label for="email" class="col-sm-2 control-label">Name</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <div class="row"> 
+		                                                <!-- <div class="col-md-3" > 
+		                                                    <select id="genderSelection" class="form-control">
+		                                                   
+		                                                        <option>Mr.</option> 
+		                                                        <option>Ms.</option> 
+		                                                        <option>Mrs.</option> 
+		                                                    </select> 
+		                                                </div>  -->
+		                                                <div class="col-md-9"> 
+		                                                    <input id="signupName" type="text" class="form-control" placeholder="Name"> 
+		                                                </div> 
+		                                            </div> 
+		                                        </div> 
+		                                    </div> 
+		                                    <div class="form-group"> 
+		                                        <label for="email" class="col-sm-2 control-label">Email</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <input id="signUpEmail" type="email" class="form-control" id="email" placeholder="Email"> 
+		                                        </div> 
+		                                    </div> 
+		                                    <!-- <div class="form-group"> 
+		                                        <label for="mobile" class="col-sm-2 control-label">Mobile</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <input type="email" class="form-control" id="mobile" placeholder="Mobile"> 
+		                                        </div> 
+		                                    </div> --> 
+		                                    <div class="form-group"> 
+		                                        <label for="password" class="col-sm-2 control-label">Password</label> 
+		                                        <div class="col-sm-10"> 
+		                                            <input id="passwordSignUp" type="password" class="form-control" id="password" placeholder="Password"> 
+		                                        </div> 
+		                                    </div> 
+		                                    <div class="row"> 
+		                                        <div class="col-sm-2"> 
+		                                        </div> 
+		                                        <div class="col-sm-10"> 
+		                                            <button id="submitSignUp" type="button" class="btn btn-primary btn-sm">Save &amp; Continue</button> 
+		                                        </div> 
+		                                    </div> 
+		                                    </form> 
+		                                </div> 
+		                                <div id="OR" class="hidden-xs">OR</div> 
+		                            </div> 
+		                            <div class="col-md-4"> 
+		                                <div class="row text-center sign-with"> 
+		                                    <div class="col-md-12"> 
+		                                        <h3>Sign in with</h3> 
+		                                    </div> 
+		                                    <div class="col-md-12"> 
+		                                        <div class="btn-group btn-group-justified"> 
+		                                            <a href="http://bootsnipp-env.elasticbeanstalk.com/iframe/W7Xmz#" class="btn btn-primary">Facebook</a>  
+		                                            <a href="http://bootsnipp-env.elasticbeanstalk.com/iframe/W7Xmz#" class="btn btn-danger">Google</a> 
+		                                        </div> 
+		                                    </div> 
+		                                </div> 
+		                            </div> 
+		                        </div> 
+		                    </div> 
+		                </div> 
+		            </div> 
+		        </div>
+			<button id="manual_close_1" type="button" class="overlay-close">Close</button>
 	</div>
 	
 	<script src="{% static 'classie.js' %}"></script>

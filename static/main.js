@@ -58,17 +58,9 @@ $("document").ready(function($){
                     FB.login(function(response){
                         uid = response.authResponse.userID;
                         accessToken = response.authResponse.accessToken;
+                        $('.logindiv').addClass('hidden');
+                        $('.interestdiv').removeClass('hidden');
                         // document.getElementById('manual_close_1').click();
-                        FB.api(
-                            "/{object-id}/likes",
-                            function (response) {
-                              if (response && !response.error) {
-                                $.each(response.data,function(index,friend) {
-                                    alert(friend.name + ' has id:' + friend.id);
-                                });
-                              }
-                            }
-                        );
                     });
                 }
         },true);
@@ -88,25 +80,76 @@ $("document").ready(function($){
     $('.btn-login').click(function(){
         $('.navbar').css('z-index','-100');
         $('.logindiv').css('z-index','200');
-        $('.logindiv').html(login_Html);
-        el = document.getElementById('fb-button1');
-        $('.btn-login').css('color','#ffffff');
+        $('.logindiv').removeClass('hidden');
+        $('html').css('overflow-x','hidden');
         $('html').css('overflow-y','hidden');
+        $('.btn-login').css('color','#ffffff');
+        el = document.getElementById('fb-button1');
         if(el){
             el.addEventListener('click', function(){
                 fb();
             });
         }
+        var userName = document.getElementById('email1');
+        var password = document.getElementById('exampleInputPassword1');
+
+        $('#submitButton').click(function(){
+            if(userName.value == '' && password.value == '')
+            {
+                alert('Please Enter User Name and Password');
+            }
+            else if(userName.value == '')
+            {
+                alert('Please Enter userName');
+            }
+            else if(password.value == '')
+            {
+                alert('Please Enter password');
+            }
+            else
+            {
+                $('.logindiv').addClass('hidden');
+                $('.interestdiv').removeClass('hidden');
+            }
+        });
     });
 
     
 
     $('.btn-signup').click(function(){
-        $('.navbar').css('z-index','-100');
+       $('.navbar').css('z-index','-100');
         $('.signupdiv').css('z-index','200');
-        $('.signupdiv').html(Registration_HTML);
+        $('.signupdiv').removeClass('hidden');
+        
+        $('#submitSignUp').click(function(){
+            // document.getElementById('genderSelection').selectedIndex != null &&
+            if( document.getElementById('signupName').value == ''
+                && document.getElementById('passwordSignUp').value == "" && document.getElementById('signUpEmail').value == "")
+            {
+                alert('Please Fill all fields');
+            }
+            else if(document.getElementById('signupName').value == '')
+            {
+                alert('Please Enter userName');
+            }
+            else if(document.getElementById('passwordSignUp').value == '')
+            {
+                alert('Please Enter password');
+            }
+            
+            else if(document.getElementById('signUpEmail').value == '')
+            {
+                alert('Please Enter Email');
+            }
+            else
+            {
+                $('.signupdiv').addClass('hidden');
+                $('.interestdiv').removeClass('hidden');
+            }
+        });
         $('.btn-signup').css('color','#ffffff');
         $('html').css('overflow-y','hidden');
+        $('html').css('overflow-x','hidden');
     });
  
 

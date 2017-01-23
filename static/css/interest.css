@@ -1,0 +1,85 @@
+ 
+
+.interest{
+  width: 168px; 
+  height: 100px;  
+  margin-right: -20px;
+}
+
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12
+, #label13, #label14, #label15
+{
+  background: black;
+  opacity: 0.75;
+  width: 125px;
+  height: 30px;
+  position: absolute;
+  z-index: 4;
+  top: 95px;
+  text-align: center;
+  cursor: pointer;
+}
+ 
+h6{
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+ #image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9, #image10, #image11, #image12
+ , #image13, #image14, #image15{
+  cursor: pointer;
+  border-radius: 3px;
+ }
+
+#image1-circle2, #image2-circle2, #image3-circle2, #image4-circle2, 
+#image5-circle2, #image6-circle2, #image7-circle2, #image8-circle2
+,#image9-circle2, #image10-circle2, #image11-circle2, #image12-circle2
+,#image13-circle2, #image14-circle2, #image15-circle2{
+  cursor: pointer;
+}
+
+.hover08 figure img {
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+#mainDivModalInterest{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#image1-circle1,#image2-circle1,#image3-circle1,#image4-circle1,#image5-circle1,#image6-circle1
+,#image7-circle1,#image8-circle1,#image9-circle1,#image10-circle1,#image11-circle1,#image12-circle1
+,#image13-circle1,#image14-circle1,#image15-circle1{
+  position: absolute; 
+  top: 8px; 
+  left: 62px; 
+  opacity: 0.85; 
+  width: 32px; 
+  height: 32px; 
+  z-index: 3
+}
+
+#image1-circle2,#image2-circle2,#image3-circle2,#image4-circle2,#image5-circle2,#image6-circle2
+,#image7-circle2,#image8-circle2,#image9-circle2,#image10-circle2,#image11-circle2,#image12-circle2
+,#image13-circle2,#image14-circle2,#image15-circle2{
+  position: absolute; 
+  top: 8px; 
+  left: 62px; 
+  opacity: 0.85; 
+  width: 32px; 
+  height: 32px;
+}
+
+
+/*.hover08 figure:hover img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}*/
+
+
+
+/*fb-color #31708f*/
