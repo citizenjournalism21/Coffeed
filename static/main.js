@@ -62,6 +62,7 @@ $("document").ready(function($){
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
            FB.init({
                     appId: '1810040475914387',
+                    xfbml      : true,
                     version: 'v2.7'
                 });
            getStatus();
