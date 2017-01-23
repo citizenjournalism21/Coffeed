@@ -47,8 +47,7 @@ $("document").ready(function($){
                     {
                         uid = response.authResponse.userID;
                         accessToken = response.authResponse.accessToken;
-                        $('.logindiv').addClass('hidden');
-                        $('.interestdiv').removeClass('hidden');
+                        
                     } 
                     else if (response.status === 'not_authorized') 
                     {
@@ -66,6 +65,11 @@ $("document").ready(function($){
                         });
                     }
             },true);
+            if(uid !=0)
+            {
+                $('.logindiv').addClass('hidden');
+                $('.interestdiv').removeClass('hidden');
+            }
          });
     }
 
