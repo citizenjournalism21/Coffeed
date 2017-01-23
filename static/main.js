@@ -31,31 +31,7 @@ $("document").ready(function($){
     var accessToken = 0;
     function getStatus()
     {
-        FB.getLoginStatus(function(response) 
-        {
-                if (response.status === 'connected') 
-                {
-                    uid = response.authResponse.userID;
-                    accessToken = response.authResponse.accessToken;
-                    $('.logindiv').addClass('hidden');
-                    $('.interestdiv').removeClass('hidden');
-                } 
-                else if (response.status === 'not_authorized') 
-                {
-                        // the user is logged in to Facebook, 
-                        // but has not authenticated your app
-                } 
-                else
-                {
-                    FB.login(function(response){
-                        uid = response.authResponse.userID;
-                        accessToken = response.authResponse.accessToken;
-                        $('.logindiv').addClass('hidden');
-                        $('.interestdiv').removeClass('hidden');
-                        // document.getElementById('manual_close_1').click();
-                    });
-                }
-        },true);
+        
     }
     function fb()
     {
@@ -65,7 +41,31 @@ $("document").ready(function($){
                     appId: '1810040475914387',
                     version: 'v2.7'
                 });
-           getStatus();
+           FB.getLoginStatus(function(response) 
+           {
+                    if (response.status === 'connected') 
+                    {
+                        uid = response.authResponse.userID;
+                        accessToken = response.authResponse.accessToken;
+                        $('.logindiv').addClass('hidden');
+                        $('.interestdiv').removeClass('hidden');
+                    } 
+                    else if (response.status === 'not_authorized') 
+                    {
+                            // the user is logged in to Facebook, 
+                            // but has not authenticated your app
+                    } 
+                    else
+                    {
+                        FB.login(function(response){
+                            uid = response.authResponse.userID;
+                            accessToken = response.authResponse.accessToken;
+                            $('.logindiv').addClass('hidden');
+                            $('.interestdiv').removeClass('hidden');
+                            // document.getElementById('manual_close_1').click();
+                        });
+                    }
+            },true);
          });
     }
 
