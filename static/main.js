@@ -64,7 +64,7 @@ $("document").ready(function($){
                             // document.getElementById('manual_close_1').click();
                         });
                     }
-            });
+            },true);
             if(uid !=0)
             {
                 $('.logindiv').addClass('hidden');
