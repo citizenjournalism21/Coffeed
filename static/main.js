@@ -37,16 +37,18 @@ $("document").ready(function($){
                 {
                     uid = response.authResponse.userID;
                     accessToken = response.authResponse.accessToken;
-                    FB.api(
-                            "/me?fields=id,name",
-                            function (response) {
-                              if (response && !response.error) {
-                                $.each(response.data,function(index,friend) {
-                                    alert(friend.name + ' has id:' + friend.id);
-                                });
-                              }
-                            }
-                        );
+                    // FB.api(
+                    //         "/me?fields=id,name",
+                    //         function (response) {
+                    //           if (response && !response.error) {
+                    //             $.each(response.data,function(index,friend) {
+                    //                 alert(friend.name + ' has id:' + friend.id);
+                    //             });
+                    //           }
+                    //         }
+                    //     );
+                    $('.logindiv').addClass('hidden');
+                    $('.interestdiv').removeClass('hidden');
                 } 
                 else if (response.status === 'not_authorized') 
                 {
