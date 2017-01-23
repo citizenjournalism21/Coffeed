@@ -156,11 +156,11 @@ $("document").ready(function($){
         $('html').css('overflow-x','hidden');
     });
 
-    $('#fb-button1').click(function(){
-        debugger;
+    // $('#fb-button1').click(function(){
+    //     debugger;
         
 
-    });
+    // });
 
 
     // $("button#fb-button1").click(function() {
