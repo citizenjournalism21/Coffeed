@@ -59,7 +59,7 @@ $("document").ready(function($){
     function fb()
     {
         $.ajaxSetup({ cache: true });
-        $.getScript('http://connect.facebook.net/en_US/all.js', function(){
+        $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
            FB.init({
                     appId: '1810040475914387',
                     xfbml      : true,

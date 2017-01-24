@@ -1,5 +1,5 @@
 function go(data1) {
-    google.charts.load("current", {packages:["corechart"]});
+      google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
@@ -39,6 +39,6 @@ $(document).ready(function(){
     //         }    
     //     });
     // }); 
-    var data = [['Task', 'Hours per Day'],['Eat', 10],['Commute',  5],['Watch TV', 2]];
+    var data = [['Task', 'Hours per Day'],['Tehcnology', 10],['Sports',  5],['Entertainment', 2]];
     go(data);
 })
